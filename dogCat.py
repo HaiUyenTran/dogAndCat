@@ -6,7 +6,6 @@ from keras import models
 from keras import layers
 from keras import optimizers
 import matplotlib.pyplot as plt
-
 def extract_feature(dir, sample_count):
     feature  = np.zeros(shape=(sample_count, 4, 4, 512))
     label = np.zeros(shape=(sample_count))
