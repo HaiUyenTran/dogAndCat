@@ -158,8 +158,8 @@ history = model.fit_generator(train_generator,
                               epochs = 5,
                               validation_data=val_generator,
                               validation_steps= 50)
-import keras as kr
-kr.save_model_hdf5(model, "cats_and_dogs_small_3.h5")
+
+model.save('dogAndCat.h5')
 #plot the result
 acc = history.history['acc']
 val_acc = history.history['val_acc']
@@ -176,5 +176,5 @@ plt.plot(epochs, val_loss, 'b', label='Validation loss')
 plt.title('Training and validation loss')
 plt.legend()
 plt.show()
-
+del model
 print("done")
